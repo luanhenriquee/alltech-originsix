@@ -1,4 +1,5 @@
-/* ====== RESET ============================================================ */ 
+
+/*====  RESET ============================ */
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +42,7 @@ img {
   --body-font: 'DM Sans', sans-serif;
 }
 
-/* ====== BASE ============================================================ */ 
+/*===  BASE ============================ */
 html {
   scroll-behavior: smooth;
 }
@@ -72,7 +73,7 @@ body {
 }
 
 .button:hover {
-  background: var(--base-color-alt)
+  background: var(--base-color-alt);
 }
 
 .divider-1 {
@@ -80,7 +81,7 @@ body {
   background: linear-gradient(
     270deg,
     hsla(var(--hue), 36%, 57%, 1),
-    hsla(var(--hue), 65%, 88%, 0.34) 
+    hsla(var(--hue), 65%, 88%, 0.34)
   );
 }
 
@@ -93,7 +94,7 @@ body {
   );
 }
 
-/* ====== LAYOUT ============================================================ */ 
+/*====  LAYOUT ============================ */
 .container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -105,7 +106,7 @@ body {
 }
 
 .section {
-  padding: calc(5rem +var(--header-height)) 0;
+  padding: calc(5rem + var(--header-height)) 0;
 }
 
 .section .title {
@@ -113,7 +114,7 @@ body {
 }
 
 .section .subtitle {
-  font-size: var(--subtitle-font-size) 
+  font-size: var(--subtitle-font-size);
 }
 
 .section header {
@@ -129,21 +130,19 @@ body {
   margin-bottom: 2rem;
   display: flex;
 
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   background-color: var(--body-color);
+  width: 100%;
 }
 
 #header.scroll {
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
 }
 
-
-
-/* ====== LOGO ============================================================ */ 
+/*====  LOGO ============================ */
 .logo {
   font: 700 1.31rem var(--title-font);
   color: var(--title-color);
@@ -157,7 +156,7 @@ body {
   color: var(--body-color);
 }
 
-/* ====== NAVGATION ============================================================ */ 
+/*====  NAVIGATION ============================ */
 nav {
   height: var(--header-height);
   display: flex;
@@ -168,17 +167,6 @@ nav {
 
 nav ul li {
   text-align: center;
-}
-
-nav .menu {
-  opacity: 0;
-  visibility: hidden;
-  top: -20rem;
-  transition: 0.2s;
-}
-
-nav .menu ul {
-  display: none;
 }
 
 nav ul li a {
@@ -196,17 +184,28 @@ nav ul li a::after {
   width: 0%;
   height: 2px;
   background: var(--base-color);
-  
+
   position: absolute;
   left: 0;
   bottom: -1.5rem;
-  
+
   transition: width 0.2s;
 }
 
 nav ul li a:hover::after,
 nav ul li a.active::after {
   width: 100%;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+  top: -20rem;
+  transition: 0.2s;
+}
+
+nav .menu ul {
+  display: none;
 }
 
 /* Mostrar menu */
@@ -226,7 +225,6 @@ nav.show .menu {
   display: grid;
   place-content: center;
 }
-
 
 nav.show .menu ul {
   display: grid;
@@ -260,7 +258,7 @@ nav.show div.icon-close {
   top: 1.5rem;
 }
 
-/* ====== HOME ============================================================ */ 
+/*====  HOME ============================ */
 #home {
   overflow: hidden;
 }
@@ -306,10 +304,9 @@ nav.show div.icon-close {
 
 #home .text p {
   margin-bottom: 2rem;
-  max-width: 100%;
 }
 
-/* ====== ABOUT ============================================================ */ 
+/*====  ABOUT ============================ */
 #about {
   background: white;
 }
@@ -345,10 +342,9 @@ nav.show div.icon-close {
 #about .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  text-align: center;
 }
 
-/* ====== SERVICES ============================================================ */ 
+/*====  SERVICES ============================ */
 .cards.grid {
   gap: 1.5rem;
 }
@@ -373,7 +369,7 @@ nav.show div.icon-close {
   margin-bottom: 0.75rem;
 }
 
-/* ====== TESTIMONIALS ============================================================ */ 
+/*====  TESTIMONIALS ============================ */
 #testimonials {
   background: white;
 }
@@ -381,6 +377,8 @@ nav.show div.icon-close {
 #testimonials .container {
   margin-left: 0;
   margin-right: 0;
+  position: relative;
+  overflow: hidden;
 }
 
 #testimonials header {
@@ -391,7 +389,7 @@ nav.show div.icon-close {
 
 #testimonials blockquote {
   padding: 2rem;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-radius: 0.25rem;
 }
 
@@ -414,7 +412,6 @@ nav.show div.icon-close {
   display: flex;
   align-items: center;
   font-style: normal;
-  color: var(--text-color);
 }
 
 #testimonials cite img {
@@ -425,13 +422,13 @@ nav.show div.icon-close {
   margin-right: 0.5rem;
 }
 
-/* Swiper */
+/* swiper */
 .swiper-slide {
   height: auto;
   padding: 4rem 1rem;
 }
 
-.swiper-pogination-bullet {
+.swiper-pagination-bullet {
   width: 0.75rem;
   height: 0.75rem;
 }
@@ -440,7 +437,7 @@ nav.show div.icon-close {
   background: var(--base-color);
 }
 
-/* ====== CONTACT ============================================================ */ 
+/*====  CONTACT ============================ */
 #contact .grid {
   gap: 4rem;
 }
@@ -468,7 +465,7 @@ nav.show div.icon-close {
   color: var(--base-color);
 }
 
-/* ====== FOOTER ============================================================ */ 
+/*====  FOOTER ============================ */
 footer {
   background: var(--base-color);
 }
@@ -523,7 +520,7 @@ footer .social a:hover {
 
   visibility: hidden;
   opacity: 0;
-  
+
   transition: 0.3s;
   transform: translateY(100%);
 }
@@ -534,11 +531,10 @@ footer .social a:hover {
   transform: translateY(0);
 }
 
-/*============= MEDIA QUERIES =============*/
-
+/*========= MEDIA QUERIES =========*/
 /* extra large devices: 1200 > */
 @media (min-width: 1200px) {
-  
+  /* reusable classes */
   .container {
     max-width: 1120px;
     margin-left: auto;
@@ -561,7 +557,7 @@ footer .social a:hover {
     height: 3.125rem;
   }
 
-  /* NAVATION */
+  /* navigation */
   nav .menu {
     opacity: 1;
     visibility: visible;
@@ -578,7 +574,7 @@ footer .social a:hover {
     -webkit-font-smoothing: antialiased;
   }
 
-  nav .menu ul li a.active{
+  nav .menu ul li a.title.active {
     font-weight: bold;
     -webkit-font-smoothing: auto;
   }
@@ -587,12 +583,12 @@ footer .social a:hover {
     display: none;
   }
 
-  /* LAYOUT */
+  /* layout */
   main {
     margin-top: var(--header-height);
   }
 
-  /* HOME */
+  /* home */
   #home .container {
     grid-auto-flow: column;
     justify-content: space-between;
@@ -609,13 +605,13 @@ footer .social a:hover {
     text-align: left;
   }
 
-  /* ABOUT */
+  /* about */
   #about .container {
     margin: 0 auto;
     grid-auto-flow: column;
   }
-  
-  /* SERVICES */
+
+  /* services */
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -625,13 +621,13 @@ footer .social a:hover {
     padding-right: 3rem;
   }
 
-  /* TESTIMONIALS */
+  /* testimonials */
   #testimonials .container {
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* CONTACT */
+  /* contact */
   #contact .container {
     grid-auto-flow: column;
     align-items: center;
@@ -641,7 +637,7 @@ footer .social a:hover {
     max-width: 25rem;
   }
 
-  /* FOOTER */
+  /* footer */
   footer.section {
     padding: 3.75rem 0;
   }
@@ -653,7 +649,7 @@ footer .social a:hover {
   }
 
   footer .logo {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 }
 /* large devices: 1023 > */
@@ -664,5 +660,4 @@ footer .social a:hover {
     --subtitle-font-size: 1.125rem;
   }
 }
-
 /* medium devices: 767 > */
